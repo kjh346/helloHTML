@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>텍스트와 관련된 입력필드</h2>
+    
+    <!-- action : 요청하려는 페이지 주소-->
+    <form action="order.html">
+        <!-- input 필드의 속성
+         name : 서버에 값을 전달할 때 필요한 속성
+         id : 해당 요소를 식별할 수 있는 속성
+         placeholder : 사용자에게 입력값의 힌트를 제공
+         required : 입력필수
+                    실제 현장에서는 자바스크립트를 활용해서 유효성검사를 진행한다
+                    유효성검사(validation check) : 값이 유효한지 체크-->
+        <ul>
+            <li>
+                아이디 : <input type="text" name="userID" required placeholder="아이디를 입력해주세요">
+            </li>
+            <li>
+                비밀번호 : <input type="password" name="userPW" id="userpw">
+            </li>
+            <li>
+                이메일 : <input type="email" name="userEmail" id="">
+            </li>
+            <li>
+                <!-- 값을 입력시 http:// 또는 https:// 가 있는지 체크-->
+                홈페이지 : <input type="url" name="url" id="" value="http://">
+            </li>
+            <li>
+                검색 : <input type="search" name="search" id="">
+            </li>
+            <li>
+                <!--html5에서 추가된 기능
+                datalist태그 (select)
+                    텍스트필드에서 데이터 목록중 값을 선택하여 입력
+                입력필드의 list속성에 datalist의 id 값을 입력합니다-->
+                색상 : <input type="text" name="color" list="mycolor">
+                <datalist id="mycolor">
+                    <option value="black">검정색</option>
+                    <option value="white">흰색</option>
+                    <option value="skyblue">하늘색</option>
+                </datalist>
+
+            </li>
+        </ul>
+
+        <button type="submit">회원가입</button>
+        <button type="reset">초기화</button>
+
+    </form>
+
+    <h2>숫자 관련 필드</h2>
+    <form action="order.html">
+    <ul>
+        <li>
+            <!--
+                스핀박스(위아래 화살표버튼)는 브라우저에 따라 나올수도 안나올수도 있음-->
+            <input type="number" name="amount"
+            value="0" min="0" max="100" step="10">
+        </li>
+        <li>
+            <input type="range" name="point"
+                value="300" min="0" max="1000" step="100">
+        </li>
+        <button>전송</button>
+    </ul>
+    </form>
+
+    <h3>날짜/시간 관련된 입력필드</h3>
+    <form action="order.html">
+        <!-- date|month|week|time|datetime -->
+        <ul>
+            <li>
+                <input type="date">
+                <input type="date" value="2024-07-05">
+            </li>
+            <li>
+                <input type="month">
+                <input type="month" value="2023-05">
+            </li>
+            <li>
+                <!--datetime은 크롬,ie에서 지원 안됨-->
+                <input type="datetime">
+                <input type="datetime-local">
+            </li>
+            <li>
+                <input type="week">
+            </li>
+        </ul>
+    </form>
+    <h2>라디오버튼과 체크박스</h2> 
+    <form action="">   
+        <ul>
+            <li>
+                <!--여러항목중 한가지만 선택해야 하는 경우 사용
+                name속성을 똑같이 주어 묶어준다
+                선택된 요소의 값이 서버로 전달됨
+                checked속성 : 요소 미리선택
+                
+                서버에 전달시 선택된 값이 없는경우 전달되지 않음
+                name속성 = 선택된 요소의 value값-->
+                성별 : 
+                <input type="radio" name="gender" value="m" checked>남
+                <input type="radio" name="gender" value="f">여
+                <input type="radio" name="gender" value="t">기타
+                <hr>
+                결혼여부 : 
+                <input type="radio" name="marriage" value="n" checked> 미혼
+                <input type="radio" name="marriage" value="y"> 기혼
+
+            </li>
+
+            <li>
+                <!--여러 항목 중에서 여러가지를 선택할 때-->
+                취미 : 
+                <input type="checkbox" name="hobby" value="baseball">야구
+                <input type="checkbox" name="hobby" value="football">축구
+                <input type="checkbox" name="hobby" value="basketball">농구
+
+            </li>
+
+            <li>
+                <!--
+                select태그와 option태그
+                여러 옵션 중에서 선택 하게 하고 싶을때 사용하는 드롭다운목록-->
+                국적
+                <select name="" id="">
+                    <option value="ko">한국</option>
+                    <option value="ch">중국</option>
+                    <option value="jp" selected>일본</option>
+                </select>
+                <select name="" id="">
+                    <optgroup label="아시아">
+                    <option value="ko">한국</option>
+                    <option value="ch">중국</option>
+                    <option value="jp" selected>일본</option>
+                </optgroup>
+                <optgroup label="아메리카">
+                    <option value="en">미국</option>
+                </optgroup>
+                </select>
+            </li>
+            
+            <li>
+                <textarea name="" id="" cols="50" rows="20"
+                style="resize: none;"
+                placeholder="내용을 입력해주세요"></textarea>
+            </li>
+        </ul>
+        <button>서버에 요청</button>
+    </form>
+
+
+
+
+</body>
+</html>

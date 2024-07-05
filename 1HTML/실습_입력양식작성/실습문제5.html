@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>예약 접수</title>
+	<!-- <style>
+		ul {
+			list-style:none;
+		}
+		li {
+			line-height:50px;
+		}
+		label {
+			width:60px;
+			float:left;
+		}
+	</style> -->
+
+	<style>
+		ul{
+			list-style: none;
+		}
+		li{
+			/*스타일을 작성 할때는 단위를 꼭 입력한다*/
+			line-height: 30px;
+		}
+		label{
+			/*인라인속성은 너비를 가질 수 없다*/
+			width: 100px;
+			display: inline-block;
+			text-align: center;
+			border: 1px solid;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>예약 정보</h1>
+	
+	<form action="">
+	<ul>
+		<li>이 름 &nbsp;&nbsp;<input type="text" name="name"></li>
+		<li>휴대폰 <input type="text" name="cell"></li>
+		<li>이메일 <input type="text" name="email"></li>
+		<li><button>예약하기</button></li>
+	</ul>
+	
+	</form>
+
+	<label for="userId">아이디 </label><input type="text" id="userId"><br>
+	<label for="userpw">비밀번호 </label><input type="text" id="userpw">
+</body>
+</html>
