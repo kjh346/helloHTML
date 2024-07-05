@@ -20,9 +20,9 @@
     <h1>주문하기</h1>
     <form action="">
         <ul>
-        <li>고객명 : <input type="text"></li>
-        <li>전화번호 : <input type="text"></li>
-        <li>E-mail : <input type="email"></li>
+        <li>고객명 : <input type="text" name="name"></li>
+        <li>전화번호 : <input type="text" name="tel"></li>
+        <li>E-mail : <input type="email" name="email"></li>
         
         <fieldset>
             <legend>피자 사이즈</legend>
@@ -41,7 +41,7 @@
 
         <li>희망 배송 시간 : <input type="time" name="time" id=""></li>
 
-        <li>배송시 요청 사항 : <textarea name="request" id="" rows="3"></textarea></li>
+        <li>배송시 요청 사항 : <textarea name="request" id="" rows="3" style="resize: none;"></textarea></li>
         
 
         <button>주문하기</button>
