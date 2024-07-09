@@ -1,0 +1,30 @@
+div{
+    border: 1px solid black;
+}
+
+.box1{
+    border: 1px solid red;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+.size1{
+    width: 100px;
+    height: 20px;
+}
+
+.size2{
+    width: 20%;
+    height: 20px;
+}
+
+.size3{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.inline{
+    display: inline-block;
+}
