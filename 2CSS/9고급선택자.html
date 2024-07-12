@@ -5,18 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     
+        /* 자식선택자 */
+        body > ul{
+            background-color: #333;
+        }
+        /* 자손선택자 */
+        body ul{
+            background-color: red;
+        }
+        /* 형제선택자 : 부모가 같은 요소 
+        선택자1 + 선택자2
+
+        선택자1 ~ 선택자2
+        같은 레벨이면서 형요소 다음에 오는 모든 동생요소
+        */
+        h1 + ul{
+            background-color: aqua;
+        }
+        h1 ~ a{
+            background-color: purple;
+        }
+        /* 속성선택자 */
+        /* 속성이 있으면 선택 */
+        [href]{
+            color:red;
+        /* ^= 속성의 값이 시작하는경우
+           $= 속성의 값이 끝나는 경우
+           *= 속성의 값이 포함하는경우 */
+        }
+        [href="a.png"]{
+            background-color: black;
+        }
+        [href ^= "c"]{
+            background-color: blue;
+        }
+
+
     </style>
 </head>
 <body>
     <h1>고급선택자</h1>
-    <ul>
-        <li><a href="">메뉴1</a></li>
-        <li><a href="">메뉴2</a></li>
+    <ul class="top">
+        <li><a href="a.png">메뉴1</a></li>
+        <li><a href="b.html">메뉴2</a></li>
         <li>메뉴3</li>
         <li>메뉴4</li>
     </ul>
-    <a href="">메인화면</a>
+    <a href="c.gif">메인화면</a>
     <div>
         <h1>제목</h1>
         <ul>
